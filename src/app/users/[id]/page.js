@@ -2,8 +2,8 @@
 import { use } from 'react';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { useUser, useUserPosts } from '../../../hooks/useQueries';
-import PostCard from "../../../components/PostCards";
-import Loading from "../../../components/Loader";
+import PostCard from "../../../Components/PostCards";
+import Loading from "../../../Components/Loader";
 import Link from "next/link";
 
 const queryClient = new QueryClient();

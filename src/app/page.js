@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useUsers } from '../hooks/useQueries';
-import UserCard from "../components/UserCard";
-import Loading from "../components/Loader";
+import UserCard from "../Components/UserCard";
+import Loading from "../Components/Loader";
 import Link from "next/link";
 
 // Create a client
