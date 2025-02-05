@@ -173,6 +173,9 @@ function UsersPage() {
           )}
         </div>
       </div>
+       <div className="flex justify-center items-center text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 text-white p-10 ">
+       &copy; Vijay - 2025
+      </div>
     </div>
   );
 }
