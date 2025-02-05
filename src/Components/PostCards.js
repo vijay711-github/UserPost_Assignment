@@ -1,9 +1,9 @@
 export default function PostCard({ post }) {
   return (
-    <div className="mx-auto max-w-xl border rounded-lg shadow-lg bg-white hover:shadow-2xl transition-all duration-300">
+    <div className="mx-auto max-w-xl border rounded-lg shadow-lg bg-white hover:shadow-2xl transition-all duration-300 !important">
       {/* User info header */}
-      <div className="flex items-center p-4 border-b">
-        <div className="h-12 w-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 overflow-hidden">
+      <div className="flex items-center p-4 border-b !important">
+        <div className="h-12 w-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 overflow-hidden !important">
           {post.userImage ? (
             <img src={post.userImage} alt="user" className="h-full w-full object-cover" />
           ) : (
@@ -12,9 +12,9 @@ export default function PostCard({ post }) {
             </div>
           )}
         </div>
-        <div className="ml-4">
-          <p className="font-semibold text-gray-800">{post.username || 'User'}</p>
-          <p className="text-xs text-gray-500 flex items-center gap-1">
+        <div className="ml-4 !important">
+          <p className="font-semibold text-gray-800 !important">{post.username || 'User'}</p>
+          <p className="text-xs text-gray-500 flex items-center gap-1 !important">
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
             </svg>
@@ -24,15 +24,15 @@ export default function PostCard({ post }) {
       </div>
 
       {/* Post content */}
-      <div className="relative aspect-w-16 aspect-h-12 bg-gradient-to-br from-gray-50 to-gray-100">
+      <div className="relative aspect-w-16 aspect-h-12 bg-gradient-to-br from-gray-50 to-gray-100 !important">
         {post.image ? (
           <img 
             src={post.image} 
             alt={post.title} 
-            className="w-full object-cover hover:scale-105 transition-transform duration-300" 
+            className="w-full object-cover hover:scale-105 transition-transform duration-300 !important" 
           />
         ) : (
-          <div className="w-full h-64 flex items-center justify-center">
+          <div className="w-full h-64 flex items-center justify-center !important">
             <span className="text-gray-400 flex flex-col items-center">
               <svg className="w-12 h-12 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -44,12 +44,12 @@ export default function PostCard({ post }) {
       </div>
 
       {/* Post details */}
-      <div className="p-5">
-        <h2 className="text-xl font-bold text-gray-800 mb-2">{post.title}</h2>
-        <p className="text-gray-600 text-sm leading-relaxed">{post.body}</p>
+      <div className="p-5 !important">
+        <h2 className="text-xl font-bold text-gray-800 mb-2 !important">{post.title}</h2>
+        <p className="text-gray-600 text-sm leading-relaxed !important">{post.body}</p>
         
         {/* Engagement buttons */}
-        <div className="mt-6 flex items-center justify-between border-t pt-4">
+        <div className="mt-6 flex items-center justify-between border-t pt-4 !important">
           <div className="flex items-center space-x-6">
             <button className="flex items-center space-x-2 text-gray-600 hover:text-red-500 transition-colors">
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
