@@ -4,24 +4,18 @@ const apiClient = axios.create({
   baseURL: "https://jsonplaceholder.typicode.com",
 });
 
-export const fetchUsers = async () => {
-  try {
-    const response = await apiClient.get("/users");
-    return response.data;
-  } catch (error) {
-    console.error("Failed to fetch users:", error);
-    throw new Error("Failed to fetch users");
-  }
+// Renamed to follow React Query conventions
+export const getUsers = async () => {
+  const response = await apiClient.get("/users");
+  return response.data;
 };
 
-export const fetchUserPosts = async (userId) => {
-  try {
-    const response = await apiClient.get("/posts", {
-      params: { userId },
-    });
-    return response.data;
-  } catch (error) {
-    console.error(`Failed to fetch posts for user ${userId}:`, error);
-    throw new Error("Failed to fetch posts");
-  }
+export const getUserPosts = async (userId) => {
+  const response = await apiClient.get(`/posts?userId=${userId}`);
+  return response.data;
+};
+
+export const getUser = async (userId) => {
+  const response = await apiClient.get(`/users/${userId}`);
+  return response.data;
 };
